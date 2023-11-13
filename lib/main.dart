@@ -1,9 +1,14 @@
-import 'package:eco_buy/screens/mobile_side.dart/layout_page.dart';
-import 'package:eco_buy/screens/web_side/cart_items.dart';
-import 'package:eco_buy/screens/web_side/delete_products.dart';
-import 'package:eco_buy/screens/web_side/update_products.dart';
-import 'package:eco_buy/screens/web_side/web_main_screen.dart';
-import 'package:eco_buy/screens/web_side/web_login_screen.dart';
+import 'package:eco_buy/screens/bottom_page.dart';
+import 'package:eco_buy/screens/landing_screen.dart';
+import 'package:eco_buy/screens/layout_screen.dart';
+import 'package:eco_buy/screens/auth_screens/login_screen.dart';
+import 'package:eco_buy/screens/web_side/addProducts_screen.dart';
+import 'package:eco_buy/screens/web_side/dashboard_screen.dart';
+import 'package:eco_buy/screens/web_side/deleteProducts_screen.dart';
+import 'package:eco_buy/screens/web_side/updateProduct_screen.dart';
+// import 'package:eco_buy/screens/web_side/update_complete_screen.dart';
+import 'package:eco_buy/screens/web_side/web_login.dart';
+import 'package:eco_buy/screens/web_side/web_main.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -15,40 +20,46 @@ void main() async {
   if (kIsWeb) {
     await Firebase.initializeApp(
         options: const FirebaseOptions(
-            apiKey: "AIzaSyBCw9hhtoZcED-f67mZquC_NVjLPGmBXSI",
+            apiKey: "AIzaSyBJvZro8bvAkK7r6GdQbI63uEqN7p1gm2A",
             authDomain: "eco-buy-3f8ad.firebaseapp.com",
             projectId: "eco-buy-3f8ad",
             storageBucket: "eco-buy-3f8ad.appspot.com",
             messagingSenderId: "828526442301",
-            appId: "1:828526442301:android:779998472fc4c0df3ff754"));
+            appId: "1:828526442301:web:87eddd61cdb5bdb83ff754",
+            measurementId: "G-V2HHQN8WV8"));
   } else {
     await Firebase.initializeApp();
   }
-
   SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return Sizer(
-      builder: (context, orientation, deviceType) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'Sizer',
-          theme: ThemeData.light(),
-          home: const LayoutPage(),
-          routes: {
-            WebLoginScreen.id: (context) => WebLoginScreen(),
-            WebAdminScreen.id: (context) => WebAdminScreen(),
-            UpdateProductsScreen.id: (context) => const UpdateProductsScreen(),
-            DeleteProductScreen.id: (context) => const DeleteProductScreen(),
-            CartItemsScreen.id: (context) => CartItemsScreen(),
-          },
-        );
-      },
+      builder: (context, orientation, deviceType) => MaterialApp(
+        title: 'ECO BUY',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+          backgroundColor: Colors.white,
+          scaffoldBackgroundColor: Colors.white,
+        ),
+        home: LayoutScreen(),
+        routes: {
+          WebLoginScreen.id: (context) => WebLoginScreen(),
+          WebMainScreen.id: (context) => WebMainScreen(),
+          AddProductScreen.id: (context) => AddProductScreen(),
+          UpdateProductScreen.id: (context) => UpdateProductScreen(),
+          DeleteProductScreen.id: (context) => DeleteProductScreen(),
+          DashBoardScreen.id: (context) => DashBoardScreen(),
+        },
+      ),
     );
   }
 }

@@ -1,21 +1,14 @@
 import 'package:eco_buy/widgets/eco_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
-class EcoDialog extends StatelessWidget {
+class EcoDialogue extends StatelessWidget {
   final String? title;
-  const EcoDialog({super.key, this.title});
+  const EcoDialogue({Key? key, this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: Center(
-        child: Text(
-          title!,
-          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-        ),
-      ),
+      title: Text(title!),
       actions: [
         EcoButton(
           title: 'CLOSE',
