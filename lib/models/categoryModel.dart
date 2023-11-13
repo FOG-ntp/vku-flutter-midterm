@@ -6,7 +6,7 @@ class Category {
 }
 
 List<Category> categories = [
-  Category(title: "GROCERY", image: 'assets/c_images/grocery.png'),
+  Category(title: "GROCERY", image: 'assets/c_images/add_pic.png'),
   Category(title: "ELECTRONICES", image: 'assets/c_images/electronics.png'),
   Category(title: "COSMETICS", image: 'assets/c_images/cosmatics.png'),
   Category(title: "PHARMACY", image: 'assets/c_images/pharmacy.png'),

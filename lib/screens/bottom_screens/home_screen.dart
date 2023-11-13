@@ -15,13 +15,13 @@ import '../../widgets/category_home_boxex.dart';
 import '../../widgets/home_cards.dart';
 import '../product_detail_screen.dart';
 
-// List categories = [
-//   "GROCERY",
-//   "ELECTRONICES",
-//   "COSMETICS",
-//   "PHARMACY",
-//   "GARMENTS"
-// ];
+/* List categories = [
+  "GROCERY",
+  "ELECTRONICES",
+  "COSMETICS",
+  "PHARMACY",
+  "GARMENTS"
+]; */
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);

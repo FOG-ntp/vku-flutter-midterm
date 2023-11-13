@@ -37,7 +37,7 @@ dependencies:
   sizer: ^2.0.15
   firebase_storage: ^11.5.0
   flutter_admin_scaffold: ^1.2.0
-  cached_network_image: ^3.2.0
+  cached_network_image: ^3.3.0
   uuid: ^3.0.6
   flutter:
     sdk: flutter
