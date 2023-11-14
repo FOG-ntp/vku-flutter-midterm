@@ -32,12 +32,12 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final List images = [
-    "https://cdn.pixabay.com/photo/2015/09/21/14/24/supermarket-949913_960_720.jpg",
-    "https://cdn.pixabay.com/photo/2016/11/22/19/08/hangers-1850082_960_720.jpg",
-    "https://cdn.pixabay.com/photo/2016/07/24/21/01/thermometer-1539191_960_720.jpg",
-    "https://cdn.pixabay.com/photo/2015/09/21/14/24/supermarket-949913_960_720.jpg",
-    "https://cdn.pixabay.com/photo/2016/11/22/19/08/hangers-1850082_960_720.jpg",
-    "https://cdn.pixabay.com/photo/2016/07/24/21/01/thermometer-1539191_960_720.jpg",
+    "https://cdn.pixabay.com/photo/2017/03/28/12/11/chairs-2181960_1280.jpg",
+    "https://cdn.pixabay.com/photo/2015/04/20/06/46/office-730681_640.jpg",
+    "https://cdn.pixabay.com/photo/2017/03/25/23/32/kitchen-2174593_640.jpg",
+    "https://cdn.pixabay.com/photo/2017/09/09/18/25/living-room-2732939_640.jpg",
+    "https://cdn.pixabay.com/photo/2017/03/19/01/18/living-room-2155353_640.jpg",
+    "https://cdn.pixabay.com/photo/2016/09/02/22/36/kitchen-1640439_640.jpg"
   ];
 
   List<Products> allProducts = [];
@@ -97,12 +97,12 @@ class _HomeScreenState extends State<HomeScreen> {
                         text: "ECO ",
                         style: TextStyle(
                           fontSize: 27,
-                          color: Colors.deepPurple,
+                          color: Color.fromARGB(255, 23, 1, 94),
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       TextSpan(
-                        text: "BUY",
+                        text: "FURNITURE",
                         style: TextStyle(
                           fontSize: 27,
                           color: Colors.black,
@@ -139,15 +139,18 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: Container(
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
-                                  color: Colors.greenAccent),
+                                  color: const Color.fromARGB(255, 23, 1, 94)),
                               child: Center(
                                 child: Padding(
                                   padding: const EdgeInsets.all(18.0),
                                   child: Text(
                                     "HOT \n SALES",
                                     textAlign: TextAlign.center,
-                                    style: EcoStyle.boldStyle
-                                        .copyWith(fontSize: 20),
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -157,7 +160,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           Expanded(
                             child: Container(
                               decoration: BoxDecoration(
-                                color: Colors.redAccent,
+                                color: Color.fromARGB(255, 23, 1, 94),
                                 borderRadius: BorderRadius.circular(10),
                               ),
                               child: Center(
@@ -166,8 +169,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                   child: Text(
                                     "NEW \n ARRIVALS",
                                     textAlign: TextAlign.center,
-                                    style: EcoStyle.boldStyle
-                                        .copyWith(fontSize: 20),
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -176,13 +182,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
                     ),
-                    Text(
+                    /* Text(
                       "TOP BRANDS",
                       style: TextStyle(
                         fontSize: 25,
                       ),
                     ),
-                    Brands(allProducts: allProducts),
+                    Brands(allProducts: allProducts), */
                   ],
                 ),
               ),
@@ -335,11 +341,12 @@ class carousel extends StatelessWidget {
                       child: Container(
                         height: 140,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(25),
-                            gradient: LinearGradient(colors: [
+                          borderRadius: BorderRadius.circular(25),
+                          /* gradient: LinearGradient(colors: [
                               Colors.blueAccent.withOpacity(0.3),
                               Colors.redAccent.withOpacity(0.3),
-                            ])),
+                            ]) */
+                        ),
                       ),
                     ),
                     Positioned(
@@ -349,10 +356,10 @@ class carousel extends StatelessWidget {
                         color: Colors.black.withOpacity(0.5),
                         child: const Padding(
                           padding: EdgeInsets.all(8.0),
-                          child: Text(
+                          /* child: Text(
                             "TITLE",
                             style: TextStyle(fontSize: 20, color: Colors.white),
-                          ),
+                          ), */
                         ),
                       ),
                     )

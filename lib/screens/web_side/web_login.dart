@@ -108,6 +108,7 @@ class _WebLoginScreenState extends State<WebLoginScreen> {
                       onPress: () {
                         submit(context);
                       },
+                      title: "LOGIN",
                     ),
                   ],
                 ),

@@ -6,9 +6,9 @@ class Category {
 }
 
 List<Category> categories = [
-  Category(title: "GROCERY", image: 'assets/c_images/add_pic.png'),
-  Category(title: "ELECTRONICES", image: 'assets/c_images/electronics.png'),
-  Category(title: "COSMETICS", image: 'assets/c_images/cosmatics.png'),
-  Category(title: "PHARMACY", image: 'assets/c_images/pharmacy.png'),
-  Category(title: "GARMENTS", image: 'assets/c_images/garments.png'),
+  Category(title: "SOFAS", image: 'assets/c_images/sofa.png'),
+  Category(title: "TABLES", image: 'assets/c_images/side-table.png'),
+  Category(title: "CHAIRS", image: 'assets/c_images/chair.png'),
+  Category(title: "LAMPS", image: 'assets/c_images/table-lamp.png'),
+  Category(title: "BEDS", image: 'assets/c_images/bed.png'),
 ];

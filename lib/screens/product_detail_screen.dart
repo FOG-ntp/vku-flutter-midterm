@@ -147,7 +147,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Center(
-                            child: Text("${allProducts.first.price} PKR",
+                            child: Text("${allProducts.first.price} VND",
                                 style: TextStyle(color: Colors.white))),
                       ),
                     ),
@@ -208,7 +208,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                        "NOTE :  Discount of ${allProducts.first.discountPrice} PKR will be applied when you order more then three items of this product"),
+                        "NOTE :  Discount of ${allProducts.first.discountPrice} VND will be applied when you order more then three items of this product"),
                   ),
                   Container(
                     child: Row(
@@ -259,7 +259,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Center(
-                                  child: Text("${newPrice} PKR",
+                                  child: Text("${newPrice} VND",
                                       style: TextStyle(color: Colors.white))),
                             ),
                           ),
